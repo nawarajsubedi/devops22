@@ -10,8 +10,6 @@ services:
       - PORT=3307
     depends_on:
       - db
-    networks:
-      - todonet
     ports:
       - "6001:6001"
   webapp:
@@ -22,8 +20,6 @@ services:
       - api
     ports:
       - "6002:6002"
-    networks:
-      - todonet
   db: 
     image: mysql:8
     restart: always
@@ -44,5 +40,4 @@ services:
       - todonet
 volumes: 
   todo-db:
-networks: 
-  todonet:
+
