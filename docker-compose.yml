@@ -3,7 +3,7 @@ services:
   api:
     build: ./backend
     environment:
-      - HOST= 12.0.0.150
+      - HOST=12.0.0.150
       - USER=root
       - PASSWORD=
       - DATABASE=todo-db

@@ -5,12 +5,12 @@ const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize(
   process.env.DATABASE,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  process.env.USER,
+  process.env.PASSWORD,
   {
     dialect: 'mysql',
-    port: process.env.DB_PORT,
-    // host: process.env.HOST
+    port: process.env.PORT,
+    host: process.env.HOST
   }
 );
 
