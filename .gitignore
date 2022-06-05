@@ -1,0 +1,43 @@
+**/.DS_Store
+
+node_modules
+
+
+# build output
+back.tgz
+dist
+bok
+
+#  VSCode
+.vscode-test
+.vscode
+
+# Logs / yarn / npm
+**/npm-debug.log
+**/yarn-debug.log*
+**/yarn-error.log*
+**/yarn.lock
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+
+dist
+
+**/documentation.json
+scully.log
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Optional npm cache directory
+.npm
