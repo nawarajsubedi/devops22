@@ -23,18 +23,18 @@ const User = require('./models/user');
 // Force sync all models
 // It will drop the table first 
 // and re-create it afterwards
-// sequelize.sync({ force: true })
-//   .then(() => {
-//     // seed db
-//     User.create({ name: 'bob', email: 'bob@gmail.com' });
-//   })
+sequelize.sync({ force: true })
+  .then(() => {
+    // seed db
+    User.create({ name: 'bob', email: 'bob@gmail.com' });
+  })
 
 
 // App
 const app = express();
 app.get('/api', async (req, res) => {
-  // const users = await User.findAll();
-  res.send([{id: 1, name: "bob", email: 'bob@gmail.com'}]);
+  const users = await User.findAll();
+  res.send(users);
 });
 
 app.listen(PORT, HOST);
