@@ -36,8 +36,6 @@ services:
     volumes: 
       - todo-db:/var/lib/mysql
     container_name: mysql8
-    networks: 
-      - todonet
 volumes: 
   todo-db:
 
