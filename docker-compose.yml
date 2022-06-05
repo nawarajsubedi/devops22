@@ -8,8 +8,6 @@ services:
       - PASSWORD=
       - DATABASE=todo-db
       - PORT=3306
-    depends_on:
-      - db
     ports:
       - "6001:6001"
   webapp:
@@ -20,22 +18,4 @@ services:
       - api
     ports:
       - "6002:6002"
-  db: 
-    image: mysql:8
-    restart: always
-    environment: 
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-      MYSQL_ROOT_PASSWORD: ''
-      MYSQL_DATABASE: todo-db
-      MYSQL_PASSWORD: ''
-      MYSQL_TCP_PORT: 3306
-    ports: 
-      - '3306:3306'
-    expose:
-      - '3306'
-    volumes: 
-      - todo-db:/var/lib/mysql
-    container_name: mysql8
-volumes: 
-  todo-db:
 
