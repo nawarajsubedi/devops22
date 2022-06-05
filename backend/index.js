@@ -33,7 +33,7 @@ const User = require('./models/user');
 // App
 const app = express();
 app.get('/api', async (req, res) => {
-  const users = await User.findAll();
+  // const users = await User.findAll();
   res.send([{id: 1, name: "bob", email: 'bob@gmail.com'}]);
 });
 
