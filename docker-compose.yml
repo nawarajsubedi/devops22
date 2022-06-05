@@ -17,7 +17,7 @@ services:
   webapp:
     build: ./frontend
     environment:
-      - API_URL= 12.0.0.150:6001
+      - API_URL=http://localhost:6001
     depends_on:
       - api
     ports:
