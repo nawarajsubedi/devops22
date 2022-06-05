@@ -3,7 +3,7 @@ services:
   api:
     build: ./backend
     environment:
-      - HOST=host.docker.internal
+      - HOST= 12.0.0.150
       - USER=root
       - PASSWORD=
       - DATABASE=todo-db
@@ -17,7 +17,7 @@ services:
   webapp:
     build: ./frontend
     environment:
-      - API_URL=http://host.docker.internal:6001
+      - API_URL= 12.0.0.150:6001
     depends_on:
       - api
     ports:
